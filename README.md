@@ -99,3 +99,7 @@ state--->store---->action creator
 Here we are basically connecting the <APP /> component with the Action Creator using connect().
 OnClick the updated value of state will be passed to the action creator
 
+#Mapping state to props
+Mapping state to props is done using a function 
+mapStateToProps()
+It is set as the first parameter to reducx's connect function

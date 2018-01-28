@@ -19,6 +19,8 @@ class App extends Component{
     }
 
     render(){
+        console.log('this.props' , this.props);
+        
         return(
             <div className="App">
 
@@ -47,5 +49,13 @@ class App extends Component{
     }
 }
 
+//Let us define mapStateToProps() here. State will be the argument
+function mapStateToProps(state){
+    console.log('state', state);
+    return {
+        reminders : state
+    }  
+}
+
 //Connection the addReminder action creator to App component
-export default connect(null, {addReminder})(App);
+export default connect(mapStateToProps, {addReminder})(App);
