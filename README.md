@@ -96,10 +96,6 @@ We need to add STATE and state change to the components
 After creating the state, we need to connect our component to our sSTORE and the ACTION CREATOR
 state--->store---->action creator
 
-For that we need to take advantage of reducx CONNECT function.
-The connect function works by hooking up two functions to react component
-1.map state props function 2. mapDispatchToProps()
-
-mapDispatchToProps() binds the actionCreator to the dispatch function.
-Its is made possible with the connect feature
+Here we are basically connecting the <APP /> component with the Action Creator using connect().
+OnClick the updated value of state will be passed to the action creator
 
