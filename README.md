@@ -79,6 +79,27 @@ Lets create the reducer there.
 2. Add an action creator to the actions folder. Return an action JavaScript object with a type of the constant you created.
 3. Add a reducer to the reducers folder that handles this action creator
 
-Regardless, we all love something: engineering, development, or entrepreneurship. But the one constant is that we all take action in order to succeed. Otherwise, our lives would be reduced to ‘normalcy.’
+Regardless, we all love something: engineering, development, or entrepreneurship. But the one constant is that we all take action in order to succeed. Otherwise, our lives would be reduced to ‘normalcy.
 
+*************************************************************************************************************************
+############Let's boil it down########
+*************************************************************************************************************************
+                            Create Action (Constant.js)
+                                        |
+                                        |
+                            Create Action Creator (actions/index.js)----->function which return JS object
+                                        |
+                                        |
+                            Create Reducer(reducer/index.js)--------> returns the updated state
+*************************************************************************************************************************
+We need to add STATE and state change to the components
+After creating the state, we need to connect our component to our sSTORE and the ACTION CREATOR
+state--->store---->action creator
+
+For that we need to take advantage of reducx CONNECT function.
+The connect function works by hooking up two functions to react component
+1.map state props function 2. mapDispatchToProps()
+
+mapDispatchToProps() binds the actionCreator to the dispatch function.
+Its is made possible with the connect feature
 
