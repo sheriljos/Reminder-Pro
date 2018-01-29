@@ -103,3 +103,10 @@ OnClick the updated value of state will be passed to the action creator
 Mapping state to props is done using a function 
 mapStateToProps()
 It is set as the first parameter to reducx's connect function
+
+#Rendering a list of reminders
+We have the list of state and props.
+But the user doesn't kniw about  it.
+So let us define renderReminder() helper method.
+In this method, we return unorderd list of reminders submitted by the user.
+First step, we want to acces our reminders.

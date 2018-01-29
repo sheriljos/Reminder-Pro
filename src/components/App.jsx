@@ -18,9 +18,25 @@ class App extends Component{
         
     }
 
-    render(){
-        console.log('this.props' , this.props);
-        
+    renderReminders () {
+        const reminders = this.props.reminders;
+        // console.log('reminders', reminders);
+        return(
+            <ul className="list-group col-sm-4">
+            {
+                reminders.map(reminder=>{
+                    return(
+                        <li key={reminder.id} className="list-group-item">
+                            <div>{reminder.text}</div>
+                        </li>
+                    )
+                })
+            }
+            </ul>
+        )
+    }
+
+    render(){       
         return(
             <div className="App">
 
@@ -37,13 +53,16 @@ class App extends Component{
                         onChange = {(event) => this.setState({text:event.target.value})}
                         />
                     </div>
-                    <br/><br/>
 
                     <button type="button" className="btn btn-success" onClick={()=>this.addReminder()}>
                         Add Reminder
                     </button>
 
                 </div>
+                <br/>
+                {/* Calling renderReminder function to display the reminders */}
+                { this.renderReminders()}
+
             </div>
         )
     }
